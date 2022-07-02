@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
+    background-image: url(/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    font-size: 12px;
+}
+
+.card-container{
+    padding-bottom: 30px;
+    box-shadow: 0 10px 25px -10px gray;
+    height: auto;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    text-align: center;
+    color: hsl(223, 47%, 23%);
+    font-weight: 500;
+    display: grid;
+    gap: 15px;
+
+    grid-template-columns: 350px;
+    grid-template-areas: 
+    'image'
+    'torso'
+    ;
+}
+
+.head-img{
+    grid-area: image;
+    width: 100%;
+}
+
+.summary-div{
+    grid-area: torso;
+}
+.summary-div > h3{
+    font-weight: 900px;
+    margin: 10px 0;
+    font-size: 24px;
+}
+.summary-div > p{
+    opacity: 75%;
+    font-size: 13px;
+    padding: 10px 30px;
+    font-size: 13px;
+}
+
+.plan{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsl(225, 100%, 98%);
+    width: 80%;
+    margin: auto;
+    padding: 15px 5px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.plan-left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.plan-left h4{
+    font-weight: 700;
+    font-size: 12px;
+}
+.plan-left p{
+    opacity: 50%;
+}
+.plan-text{
+    padding-left: 10px;
+}
+.plan > a:hover{
+    color:hsl(245, 76%, 64%);
+    text-decoration: none;
+}
+button{
+    background-color: hsl(245, 75%, 52%);
+    border: none;
+    border-radius: 10px;
+    width: 90%;
+    padding: 10px 0;
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    box-shadow: 0 5px 15px 0 gray;
+}
+button:hover{
+    background-color:hsl(224, 23%, 55%);
+    cursor: pointer;
+}
+
+.summary-div > a{
+    text-decoration: none;
+    color: hsl(224, 23%, 55%);
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+@media (min-width: 200px) and (max-width: 600px), (min-width: 600px) and (max-width: 900px){
+    body{
+        background-image: url(/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
